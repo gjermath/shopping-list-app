@@ -15,6 +15,12 @@ enum ItemCategory: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
+    /// Localized category name for a given language code
+    func localizedName(for language: String) -> String {
+        let locale = Locale(identifier: language)
+        return String(localized: String.LocalizationValue(rawValue), locale: locale)
+    }
+
     var emoji: String {
         switch self {
         case .produce:      return "🥬"

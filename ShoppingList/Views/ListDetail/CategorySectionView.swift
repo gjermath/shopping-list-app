@@ -6,8 +6,16 @@ struct CategorySectionView: View {
     let onToggleComplete: (Item) -> Void
     let onToggleFlag: (Item) -> Void
     let onDelete: (Item) -> Void
+    var listLanguage: String? = nil
 
     @State private var isExpanded = true
+
+    private var categoryDisplayName: String {
+        if let lang = listLanguage {
+            return "\(category.emoji) \(category.localizedName(for: lang))"
+        }
+        return "\(category.emoji) \(category.rawValue)"
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -17,7 +25,7 @@ struct CategorySectionView: View {
                 }
             } label: {
                 HStack {
-                    Text("\(category.emoji) \(category.rawValue)")
+                    Text(categoryDisplayName)
                         .font(Theme.captionFont)
                         .fontWeight(.semibold)
                         .foregroundColor(Theme.categoryTextColor(category.rawValue))

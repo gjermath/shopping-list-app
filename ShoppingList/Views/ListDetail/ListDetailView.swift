@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ListDetailView: View {
     let list: ShoppingList
+    @EnvironmentObject var languageService: LanguageService
     @StateObject private var itemService = ItemService()
     @StateObject private var speechService = SpeechService()
     @State private var inputText = ""
@@ -41,7 +42,8 @@ struct ListDetailView: View {
                             },
                             onDelete: { item in
                                 Task { try? await itemService.deleteItem(listId: list.id ?? "", item: item) }
-                            }
+                            },
+                            listLanguage: list.language
                         )
                     }
 
