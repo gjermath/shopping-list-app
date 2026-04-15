@@ -3,15 +3,18 @@ import SwiftUI
 struct ListSettingsView: View {
     let list: ShoppingList
     @EnvironmentObject var listService: ListService
+    @EnvironmentObject var languageService: LanguageService
     @Environment(\.dismiss) var dismiss
 
     @State private var name: String
+    @State private var listLanguage: String
     @State private var showInvite = false
     @State private var showDeleteConfirmation = false
 
     init(list: ShoppingList) {
         self.list = list
         self._name = State(initialValue: list.name)
+        self._listLanguage = State(initialValue: list.language ?? "__app__")
     }
 
     private var isOwner: Bool {
@@ -28,6 +31,18 @@ struct ListSettingsView: View {
                                 try? await listService.updateListName(list.id ?? "", name: name)
                             }
                         }
+                }
+
+                Section(String(localized: "Language")) {
+                    Picker(String(localized: "Language"), selection: $listLanguage) {
+                        Text(String(localized: "App Default")).tag("__app__")
+                        Text("English").tag("en")
+                        Text("Dansk").tag("da")
+                    }
+                    .onChange(of: listLanguage) { _, newValue in
+                        let lang: String? = newValue == "__app__" ? nil : newValue
+                        Task { try? await languageService.updateListLanguage(list.id ?? "", language: lang) }
+                    }
                 }
 
                 Section("Members") {

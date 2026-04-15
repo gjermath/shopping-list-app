@@ -3,6 +3,7 @@ import FirebaseAuth
 
 struct ProfileView: View {
     @EnvironmentObject var authService: AuthService
+    @EnvironmentObject var languageService: LanguageService
 
     var body: some View {
         NavigationStack {
@@ -25,6 +26,17 @@ struct ProfileView: View {
                 }
 
                 Section("Preferences") {
+                    Picker(String(localized: "Language"), selection: Binding(
+                        get: { languageService.appLanguage ?? "__device__" },
+                        set: { newValue in
+                            let lang: String? = newValue == "__device__" ? nil : newValue
+                            Task { try? await languageService.updateAppLanguage(lang) }
+                        }
+                    )) {
+                        Text(String(localized: "Device Default")).tag("__device__")
+                        Text("English").tag("en")
+                        Text("Dansk").tag("da")
+                    }
                     NavigationLink {
                         Text("Notification settings")
                     } label: {
