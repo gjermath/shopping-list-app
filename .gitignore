@@ -1,0 +1,68 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# CocoaPods (in case)
+Pods/
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc
+.firebase/
+
+# Secrets - never commit real credentials
+# ShoppingList/GoogleService-Info.plist  # Uncomment if you want to exclude real config
+*.p8
+*.p12
+*.mobileprovision
+
+# Node modules (Cloud Functions)
+node_modules/
+functions/node_modules/
+functions/lib/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Superpowers
+.superpowers/
+
+# Claude
+# .claude/ is kept for project config
