@@ -4,6 +4,7 @@ import FirebaseCore
 @main
 struct ShoppingListApp: App {
     @StateObject private var authService = AuthService()
+    @StateObject private var notificationService = NotificationService()
 
     init() {
         FirebaseApp.configure()
@@ -23,6 +24,9 @@ struct ShoppingListApp: App {
                 }
             }
             .environmentObject(authService)
+            .onAppear {
+                notificationService.requestPermission()
+            }
         }
     }
 }
