@@ -35,8 +35,8 @@ targets:
         product: FirebaseStorage
       - package: FirebaseSDK
         product: FirebaseMessaging
-      - target: ShoppingListWidget
-        embed: true
+      # - target: ShoppingListWidget  # Temporarily disabled — simulator WidgetKit bug
+      #   embed: true
     entitlements:
       path: ShoppingList/ShoppingList.entitlements
       properties:
@@ -54,6 +54,19 @@ targets:
     settings:
       base:
         SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: YES
+
+  ShoppingListUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - ShoppingListUITests
+    dependencies:
+      - target: ShoppingList
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: YES
 
   ShoppingListWidget:
     type: app-extension
@@ -63,10 +76,8 @@ targets:
     settings:
       base:
         SWIFT_VERSION: "5.9"
-        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: ShoppingListWidget/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.gjermath.shoppinglist.widget
-        INFOPLIST_KEY_CFBundleDisplayName: Shopping List Widget
-        INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension
     dependencies:
       - sdk: WidgetKit.framework
       - sdk: SwiftUI.framework

@@ -11,13 +11,26 @@ class ListService: ObservableObject {
     private var listener: ListenerRegistration?
 
     func startListening() {
-        guard let userId = Auth.auth().currentUser?.uid else { return }
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("[ListService] No authenticated user, skipping listener")
+            return
+        }
+
+        print("[ListService] Starting listener for user: \(userId)")
 
         listener = db.collection("lists")
             .whereField("memberIds", arrayContains: userId)
             .order(by: "updatedAt", descending: true)
             .addSnapshotListener { [weak self] snapshot, error in
-                guard let documents = snapshot?.documents else { return }
+                if let error {
+                    print("[ListService] Listener error: \(error.localizedDescription)")
+                    return
+                }
+                guard let documents = snapshot?.documents else {
+                    print("[ListService] No documents in snapshot")
+                    return
+                }
+                print("[ListService] Received \(documents.count) lists")
                 self?.lists = documents.compactMap { doc in
                     var list = try? doc.data(as: ShoppingList.self)
                     list?.currentUserId = userId
