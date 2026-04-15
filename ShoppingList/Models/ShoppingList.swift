@@ -9,6 +9,7 @@ struct ShoppingList: Codable, Identifiable {
     var createdAt: Date
     var updatedAt: Date
     var inviteCode: String
+    var language: String?
 
     var currentUserId: String? = nil
 
@@ -18,7 +19,7 @@ struct ShoppingList: Codable, Identifiable {
     }
 
     enum CodingKeys: String, CodingKey {
-        case id, name, ownerId, memberIds, createdAt, updatedAt, inviteCode
+        case id, name, ownerId, memberIds, createdAt, updatedAt, inviteCode, language
     }
 }
 

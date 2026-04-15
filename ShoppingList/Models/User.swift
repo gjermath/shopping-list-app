@@ -13,5 +13,6 @@ struct AppUser: Codable, Identifiable {
 
     struct UserSettings: Codable {
         var notificationsEnabled: Bool = true
+        var language: String?
     }
 }

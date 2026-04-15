@@ -25,6 +25,7 @@ struct Item: Codable, Identifiable {
     var addedBy: String
     var addedAt: Date
     var source: ItemSource = .text
+    var language: String = "en"
 
     var isCompleted: Bool { status == .completed }
 
