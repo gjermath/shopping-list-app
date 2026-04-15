@@ -14,7 +14,6 @@
 		15CBB0B9AE14E7C7694B6AD4 /* ItemCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFA6DD324949068FD36F18 /* ItemCategoryTests.swift */; };
 		184701BC7426C0F5873C7C11 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39F41D39B07F7F8F86B1A7 /* ItemRowView.swift */; };
 		1FC459BEFFB28A49A3E7C806 /* ActivityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CBBC5D0DCD9372CAF44948 /* ActivityRowView.swift */; };
-		229A2C442B027B524EFE38ED /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3B8DA5CEF56D2DB916F0D2E1 /* FirebaseMessaging */; };
 		22DB00CD0B3EB8E48A1C0796 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB0A4FCA067E2240F901EE /* SuggestionsView.swift */; };
 		2305E8BE862D17E452EA46CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FA980C992E29F4CC55D33EF2 /* FirebaseFirestore */; };
 		2557FE77E4BCFC72D9447DF3 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4F490ABAD555FFC86E777 /* AIService.swift */; };
@@ -29,13 +28,13 @@
 		46976261C8C11529F9993A52 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51F8AB77BD246C0CFD5217 /* PhotoService.swift */; };
 		4AE4357C99845242DB7A5949 /* ShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373F10C580ADA703934BEF4 /* ShoppingListApp.swift */; };
 		51061D1E31AAD5E4386B5169 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422EC2948156E91DBBC0105F /* EditItemView.swift */; };
-		5829944F9B77724FE018938A /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CB6CDE302C602BFD868FCF18 /* FirebaseFunctions */; };
+		5829944F9B77724FE018938A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ED3516BA2053DD800B08C30F /* FirebaseStorage */; };
 		5B39E7AEAE4544BB01CD44A6 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3DD03864E6B36A55EC8593 /* ItemService.swift */; };
 		5B73DC857C100D92DE61CE8A /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9882AE773BA3AE955445B /* ListDetailView.swift */; };
-		636C7424C9A629768081351D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E46388ACC3298D5D10AACC7 /* FirebaseFirestoreSwift */; };
+		636C7424C9A629768081351D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CB6CDE302C602BFD868FCF18 /* FirebaseFunctions */; };
 		63A64909B84F106552C93DA3 /* ShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0760BA399BA6D076E02F4C /* ShoppingListTests.swift */; };
 		65B3717E669A757E42C8F6B6 /* MemberAvatarStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7E4CD26851C5AB56D136F /* MemberAvatarStack.swift */; };
-		6C3F319FC706B6F9EF088181 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ED3516BA2053DD800B08C30F /* FirebaseStorage */; };
+		6C3F319FC706B6F9EF088181 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3B8DA5CEF56D2DB916F0D2E1 /* FirebaseMessaging */; };
 		6E17E7CFEA03B44890A8D317 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CD611CF32745419D95FD8F4 /* GoogleService-Info.plist */; };
 		70469C7BD9466913DA7CF573 /* ListSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3F05E0467A8EFD3220B0B /* ListSettingsView.swift */; };
 		7B71BA6A7EB7D1D45B86975D /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31FD15D83CDDD5D39CA7E6 /* ItemCategory.swift */; };
@@ -169,10 +168,9 @@
 			files = (
 				A668BA5A59604B968411CDBE /* FirebaseAuth in Frameworks */,
 				2305E8BE862D17E452EA46CD /* FirebaseFirestore in Frameworks */,
-				636C7424C9A629768081351D /* FirebaseFirestoreSwift in Frameworks */,
-				5829944F9B77724FE018938A /* FirebaseFunctions in Frameworks */,
-				6C3F319FC706B6F9EF088181 /* FirebaseStorage in Frameworks */,
-				229A2C442B027B524EFE38ED /* FirebaseMessaging in Frameworks */,
+				636C7424C9A629768081351D /* FirebaseFunctions in Frameworks */,
+				5829944F9B77724FE018938A /* FirebaseStorage in Frameworks */,
+				6C3F319FC706B6F9EF088181 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +454,6 @@
 			packageProductDependencies = (
 				04DB69D214383B0C458C7032 /* FirebaseAuth */,
 				FA980C992E29F4CC55D33EF2 /* FirebaseFirestore */,
-				8E46388ACC3298D5D10AACC7 /* FirebaseFirestoreSwift */,
 				CB6CDE302C602BFD868FCF18 /* FirebaseFunctions */,
 				ED3516BA2053DD800B08C30F /* FirebaseStorage */,
 				3B8DA5CEF56D2DB916F0D2E1 /* FirebaseMessaging */,
@@ -598,6 +595,7 @@
 		2820FC0A4D9B13B1178C404D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Shopping List Widget";
 				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +603,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingList.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.shoppinglist.widget;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -625,7 +623,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.shoppinglist;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,7 +643,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.shoppinglist;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -655,6 +653,7 @@
 		795FB14369BB6B40E8AE60C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Shopping List Widget";
 				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,7 +661,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingList.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.shoppinglist.widget;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -678,7 +677,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingListTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.ShoppingListTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,7 +750,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ShoppingListTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gjermath.ShoppingListTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -884,11 +883,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A2C1F4DADBD5920CFA85757 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
-		};
-		8E46388ACC3298D5D10AACC7 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A2C1F4DADBD5920CFA85757 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
 		};
 		CB6CDE302C602BFD868FCF18 /* FirebaseFunctions */ = {
 			isa = XCSwiftPackageProductDependency;

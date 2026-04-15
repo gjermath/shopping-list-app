@@ -13,7 +13,8 @@
       "collectionGroup": "history",
       "queryScope": "COLLECTION",
       "fields": [
-        { "fieldPath": "timestamp", "order": "DESCENDING" }
+        { "fieldPath": "action", "order": "ASCENDING" },
+        { "fieldPath": "purchaseCount", "order": "DESCENDING" }
       ]
     }
   ],
