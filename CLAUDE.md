@@ -20,10 +20,11 @@ xcodebuild test -scheme ShoppingList -destination 'platform=iOS Simulator,name=i
 # Run a single UI test
 xcodebuild test -scheme ShoppingList -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -only-testing:ShoppingListUITests/ShoppingListUITests/testCreateList
 
-# Cloud Functions
-cd functions && npm run build    # TypeScript -> lib/
-cd functions && npm test
-cd functions && npm run deploy   # Deploy functions only
+# Cloud Functions (run from functions/ directory)
+cd functions && npm run build       # TypeScript -> lib/
+cd functions && npm test            # Jest tests
+cd functions && npm run serve       # Local emulator
+cd functions && npm run deploy      # Deploy functions only
 
 # Firebase deploy
 firebase deploy --only firestore:rules,firestore:indexes
@@ -97,3 +98,11 @@ Missing indexes cause snapshot listeners to fail silently. Always deploy indexes
 ## Cloud Functions
 
 TypeScript source in `functions/src/`, compiled to `functions/lib/`. Runtime: Node.js 20. Gemini API key stored as Firebase secret (`GEMINI_API_KEY`). All callable functions validate `request.auth` before processing.
+
+## Gotchas
+
+- **Firestore listeners fail silently**: If a composite index is missing or a query is malformed, snapshot listeners return no data with no error. Add error logging to listener callbacks when debugging.
+- **Simulator install with WidgetKit**: `xcrun simctl install` fails with "Invalid placeholder attributes" when the app embeds a WidgetKit extension. Workaround: strip `PlugIns/` from the .app bundle before installing, or disable the widget target in `project.yml`.
+- **Firebase Anonymous Auth**: Must be enabled in Firebase Console > Authentication > Sign-in method before the debug sign-in button works.
+- **UI tests require build-for-testing first**: Run `xcodebuild build-for-testing` before `test-without-building` when running from CLI.
+- **XCUITest element matching**: Item names in list views are inside nested SwiftUI containers. Use `app.descendants(matching: .any)` with predicate matching, not `app.staticTexts["exact"]`.
