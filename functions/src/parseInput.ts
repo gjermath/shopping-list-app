@@ -14,14 +14,15 @@ interface ParsedItem {
   category: string | null;
 }
 
-export async function parseRawInput(rawInput: string): Promise<ParsedItem[]> {
+export async function parseRawInput(rawInput: string, language: string = "en"): Promise<ParsedItem[]> {
   const model = getModel();
+  const languageName = language === "da" ? "Danish" : "English";
 
-  const prompt = `Parse this shopping list input into individual items.
+  const prompt = `Parse this shopping list input into individual items. The text is written in ${languageName}.
 For each item, extract:
-- name: the item name (clean, capitalized)
+- name: the item name (clean, capitalized, in the original language)
 - quantity: amount if mentioned (e.g., "2 lbs", "1 dozen"), or null
-- category: one of [${CATEGORIES.join(", ")}]
+- category: one of [${CATEGORIES.join(", ")}] (always use English category names)
 
 Input: "${rawInput}"
 
@@ -59,9 +60,10 @@ export const onItemCreated = onDocumentCreated(
     if (data.category) return;
 
     const listId = event.params.listId;
+    const language = data.language || "en";
 
     try {
-      const parsedItems = await parseRawInput(rawInput);
+      const parsedItems = await parseRawInput(rawInput, language);
 
       if (parsedItems.length === 1) {
         const item = parsedItems[0];
@@ -86,6 +88,7 @@ export const onItemCreated = onDocumentCreated(
             addedBy: data.addedBy,
             addedAt: data.addedAt,
             source: data.source,
+            language: language,
           });
         }
 
