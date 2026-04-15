@@ -47,6 +47,20 @@ struct SignInView: View {
                     .foregroundColor(.red)
             }
 
+            #if DEBUG
+            Button("Sign in with test account") {
+                Task {
+                    do {
+                        try await authService.signInAnonymously()
+                    } catch {
+                        errorMessage = error.localizedDescription
+                    }
+                }
+            }
+            .font(Theme.captionFont)
+            .foregroundColor(Theme.textSecondary)
+            #endif
+
             Spacer()
                 .frame(height: 40)
         }

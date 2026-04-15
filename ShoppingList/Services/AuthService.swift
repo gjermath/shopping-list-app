@@ -58,6 +58,13 @@ class AuthService: ObservableObject {
         }
     }
 
+    #if DEBUG
+    func signInAnonymously() async throws {
+        let result = try await Auth.auth().signInAnonymously()
+        try await createUserDocumentIfNeeded(result.user)
+    }
+    #endif
+
     func signOut() throws {
         try Auth.auth().signOut()
     }
