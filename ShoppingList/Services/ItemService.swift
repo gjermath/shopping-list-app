@@ -39,7 +39,7 @@ class ItemService: ObservableObject {
         listener = nil
     }
 
-    func addItem(listId: String, rawInput: String, source: ItemSource = .text) async throws {
+    func addItem(listId: String, rawInput: String, source: ItemSource = .text, language: String = "en") async throws {
         guard let userId = Auth.auth().currentUser?.uid else { return }
 
         let item = Item(
@@ -47,7 +47,8 @@ class ItemService: ObservableObject {
             rawInput: rawInput,
             addedBy: userId,
             addedAt: Date(),
-            source: source
+            source: source,
+            language: language
         )
 
         try db.collection("lists").document(listId)
@@ -137,7 +138,8 @@ class ItemService: ObservableObject {
         listId: String,
         rawInput: String,
         userId: String,
-        source: ItemSource = .text
+        source: ItemSource = .text,
+        language: String = "en"
     ) async throws {
         let db = Firestore.firestore()
 
@@ -146,7 +148,8 @@ class ItemService: ObservableObject {
             rawInput: rawInput,
             addedBy: userId,
             addedAt: Date(),
-            source: source
+            source: source,
+            language: language
         )
 
         try db.collection("lists").document(listId)

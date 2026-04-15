@@ -101,12 +101,15 @@ struct AddItemsIntent: AppIntent {
             return .result(dialog: "Sorry, something went wrong. Try again.")
         }
 
+        let language = targetList.language ?? LanguageService.deviceLanguage
+
         do {
             try await ItemService.addItemDirectly(
                 listId: listId,
                 rawInput: itemText,
                 userId: userId,
-                source: .voice
+                source: .voice,
+                language: language
             )
         } catch {
             return .result(dialog: "Sorry, I couldn't add that. Try again in a moment.")

@@ -26,6 +26,10 @@ struct ListDetailView: View {
     private let photoService = PhotoService()
     private let aiService = AIService()
 
+    private var listLanguage: String {
+        languageService.resolvedLanguage(for: list)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
@@ -63,7 +67,7 @@ struct ListDetailView: View {
                     let text = inputText.trimmingCharacters(in: .whitespaces)
                     guard !text.isEmpty else { return }
                     inputText = ""
-                    Task { try? await itemService.addItem(listId: list.id ?? "", rawInput: text) }
+                    Task { try? await itemService.addItem(listId: list.id ?? "", rawInput: text, language: listLanguage) }
                 },
                 onMicTap: {
                     if speechService.isRecording {
@@ -71,7 +75,7 @@ struct ListDetailView: View {
                         let text = speechService.transcribedText.trimmingCharacters(in: .whitespaces)
                         if !text.isEmpty {
                             Task {
-                                try? await itemService.addItem(listId: list.id ?? "", rawInput: text, source: .voice)
+                                try? await itemService.addItem(listId: list.id ?? "", rawInput: text, source: .voice, language: listLanguage)
                             }
                         }
                     } else {
@@ -122,7 +126,7 @@ struct ListDetailView: View {
         }
         .sheet(isPresented: $showSuggestions) {
             SuggestionsView(listId: list.id ?? "") { item in
-                Task { try? await itemService.addItem(listId: list.id ?? "", rawInput: item) }
+                Task { try? await itemService.addItem(listId: list.id ?? "", rawInput: item, language: listLanguage) }
             }
         }
         .sheet(isPresented: $showDuplicates) {
@@ -153,7 +157,8 @@ struct ListDetailView: View {
                             try? await itemService.addItem(
                                 listId: list.id ?? "",
                                 rawInput: item.name,
-                                source: .photo
+                                source: .photo,
+                                language: listLanguage
                             )
                         }
                     }
