@@ -1,0 +1,846 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Lists": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lister"
+          }
+        }
+      }
+    },
+    "Activity": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktivitet"
+          }
+        }
+      }
+    },
+    "Profile": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
+          }
+        }
+      }
+    },
+    "My Lists": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mine lister"
+          }
+        }
+      }
+    },
+    "List name": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listenavn"
+          }
+        }
+      }
+    },
+    "New List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ny liste"
+          }
+        }
+      }
+    },
+    "Create List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opret liste"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller"
+          }
+        }
+      }
+    },
+    "Create": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opret"
+          }
+        }
+      }
+    },
+    "No Lists Yet": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen lister endnu"
+          }
+        }
+      }
+    },
+    "Tap + to create your first shopping list": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tryk + for at oprette din første indkøbsliste"
+          }
+        }
+      }
+    },
+    "Add items...": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj varer..."
+          }
+        }
+      }
+    },
+    "List Settings": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listeindstillinger"
+          }
+        }
+      }
+    },
+    "Suggestions": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forslag"
+          }
+        }
+      }
+    },
+    "Check Duplicates": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tjek dubletter"
+          }
+        }
+      }
+    },
+    "Item": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vare"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navn"
+          }
+        }
+      }
+    },
+    "Quantity (optional)": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antal (valgfrit)"
+          }
+        }
+      }
+    },
+    "Category": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kategori"
+          }
+        }
+      }
+    },
+    "Edit Item": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rediger vare"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem"
+          }
+        }
+      }
+    },
+    "Account": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konto"
+          }
+        }
+      }
+    },
+    "Preferences": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Præferencer"
+          }
+        }
+      }
+    },
+    "Notifications": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifikationer"
+          }
+        }
+      }
+    },
+    "Notification settings": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifikationsindstillinger"
+          }
+        }
+      }
+    },
+    "Sign Out": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log ud"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprog"
+          }
+        }
+      }
+    },
+    "Device Default": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enhedsstandard"
+          }
+        }
+      }
+    },
+    "App Default": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appstandard"
+          }
+        }
+      }
+    },
+    "List Name": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listenavn"
+          }
+        }
+      }
+    },
+    "Members": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medlemmer"
+          }
+        }
+      }
+    },
+    "Owner": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejer"
+          }
+        }
+      }
+    },
+    "Member": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medlem"
+          }
+        }
+      }
+    },
+    "Invite Members": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inviter medlemmer"
+          }
+        }
+      }
+    },
+    "Delete List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet liste"
+          }
+        }
+      }
+    },
+    "Leave List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forlad liste"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Færdig"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet"
+          }
+        }
+      }
+    },
+    "This will permanently delete the list for all members.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dette vil permanent slette listen for alle medlemmer."
+          }
+        }
+      }
+    },
+    "Share this link with family members so they can join your list": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Del dette link med familiemedlemmer, så de kan deltage i din liste"
+          }
+        }
+      }
+    },
+    "Share Invite Link": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Del invitationslink"
+          }
+        }
+      }
+    },
+    "No Activity Yet": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen aktivitet endnu"
+          }
+        }
+      }
+    },
+    "Activity will appear here as you use your lists more": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktivitet vil vises her, efterhånden som du bruger dine lister mere"
+          }
+        }
+      }
+    },
+    "Finding suggestions...": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finder forslag..."
+          }
+        }
+      }
+    },
+    "No Suggestions Yet": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen forslag endnu"
+          }
+        }
+      }
+    },
+    "Suggestions improve as you use your lists more": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forslag forbedres, efterhånden som du bruger dine lister mere"
+          }
+        }
+      }
+    },
+    "Frequently Bought": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ofte købt"
+          }
+        }
+      }
+    },
+    "No Duplicates Found": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen dubletter fundet"
+          }
+        }
+      }
+    },
+    "Your list looks clean!": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din liste ser fin ud!"
+          }
+        }
+      }
+    },
+    "suggested": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "foreslået"
+          }
+        }
+      }
+    },
+    "Keep All": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Behold alle"
+          }
+        }
+      }
+    },
+    "Similar Items": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lignende varer"
+          }
+        }
+      }
+    },
+    "Duplicate Review": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dubletgennemgang"
+          }
+        }
+      }
+    },
+    "I found these items": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeg fandt disse varer"
+          }
+        }
+      }
+    },
+    "Add from Photo": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj fra foto"
+          }
+        }
+      }
+    },
+    "Shopping List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indkøbsliste"
+          }
+        }
+      }
+    },
+    "Keep your family's groceries in sync": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hold familiens indkøb synkroniseret"
+          }
+        }
+      }
+    },
+    "Sign in with test account": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log ind med testkonto"
+          }
+        }
+      }
+    },
+    "Offline — changes will sync when connected": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offline — ændringer synkroniseres når forbindelsen genoprettes"
+          }
+        }
+      }
+    },
+    "Produce": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frugt & grønt"
+          }
+        }
+      }
+    },
+    "Dairy": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mejeri"
+          }
+        }
+      }
+    },
+    "Meat": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kød"
+          }
+        }
+      }
+    },
+    "Bakery": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bageri"
+          }
+        }
+      }
+    },
+    "Frozen": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frost"
+          }
+        }
+      }
+    },
+    "Beverages": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drikkevarer"
+          }
+        }
+      }
+    },
+    "Snacks": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snacks"
+          }
+        }
+      }
+    },
+    "Pantry": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolonial"
+          }
+        }
+      }
+    },
+    "Household": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Husholdning"
+          }
+        }
+      }
+    },
+    "Personal Care": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personlig pleje"
+          }
+        }
+      }
+    },
+    "Other": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Andet"
+          }
+        }
+      }
+    },
+    "Add to Shopping List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj til indkøbsliste"
+          }
+        }
+      }
+    },
+    "Add items to a shopping list": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj varer til en indkøbsliste"
+          }
+        }
+      }
+    },
+    "Items": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varer"
+          }
+        }
+      }
+    },
+    "List": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste"
+          }
+        }
+      }
+    },
+    "You need to open Shopping List and sign in first.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du skal åbne Indkøbsliste og logge ind først."
+          }
+        }
+      }
+    },
+    "Sorry, I couldn't reach your lists. Try again in a moment.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beklager, jeg kunne ikke finde dine lister. Prøv igen om et øjeblik."
+          }
+        }
+      }
+    },
+    "You don't have any shopping lists yet. Open the app to create one.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du har ingen indkøbslister endnu. Åbn appen for at oprette en."
+          }
+        }
+      }
+    },
+    "Sorry, I couldn't add that. Try again in a moment.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beklager, jeg kunne ikke tilføje det. Prøv igen om et øjeblik."
+          }
+        }
+      }
+    },
+    "Sorry, something went wrong. Try again.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beklager, noget gik galt. Prøv igen."
+          }
+        }
+      }
+    },
+    "Unable to process Apple Sign-In credentials.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kunne ikke behandle Apple-loginoplysninger."
+          }
+        }
+      }
+    },
+    "Failed to process image.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kunne ikke behandle billedet."
+          }
+        }
+      }
+    },
+    "You must be signed in.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du skal være logget ind."
+          }
+        }
+      }
+    },
+    "Invite link not found or expired.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invitationslink ikke fundet eller udløbet."
+          }
+        }
+      }
+    },
+    "You're already a member of this list.": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du er allerede medlem af denne liste."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
