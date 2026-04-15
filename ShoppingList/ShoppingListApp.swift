@@ -28,9 +28,10 @@ struct ShoppingListApp: App {
             .environmentObject(authService)
             .environmentObject(languageService)
             .environment(\.locale, languageService.resolvedLocale)
-            .onAppear {
-                notificationService.requestPermission()
-            }
+            // TODO: Re-enable notification permission request when ready
+            // .onAppear {
+            //     notificationService.requestPermission()
+            // }
         }
     }
 }
