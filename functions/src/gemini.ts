@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { defineString } from "firebase-functions/params";
+import { defineSecret } from "firebase-functions/params";
 
-const geminiApiKey = defineString("GEMINI_API_KEY");
+export const geminiApiKey = defineSecret("GEMINI_API_KEY");
 
 let genAI: GoogleGenerativeAI | null = null;
 

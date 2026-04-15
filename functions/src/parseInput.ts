@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
 import { onDocumentCreated } from "firebase-functions/v2/firestore";
-import { getModel, CATEGORIES } from "./gemini";
+import { getModel, CATEGORIES, geminiApiKey } from "./gemini";
 
 if (!admin.apps.length) {
   admin.initializeApp();
@@ -44,7 +44,10 @@ Respond with ONLY valid JSON: {"items": [{"name": "...", "quantity": "..." or nu
 }
 
 export const onItemCreated = onDocumentCreated(
-  "lists/{listId}/items/{itemId}",
+  {
+    document: "lists/{listId}/items/{itemId}",
+    secrets: [geminiApiKey],
+  },
   async (event) => {
     const snapshot = event.data;
     if (!snapshot) return;

@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
 import { onCall, HttpsError } from "firebase-functions/v2/https";
-import { getModel } from "./gemini";
+import { getModel, geminiApiKey } from "./gemini";
 
 if (!admin.apps.length) {
   admin.initializeApp();
@@ -41,7 +41,7 @@ Respond with ONLY valid JSON: {"groups": [{"items": ["item1", "item2"], "suggest
   }
 }
 
-export const reviewDuplicates = onCall(async (request) => {
+export const reviewDuplicates = onCall({ secrets: [geminiApiKey] }, async (request) => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "Must be signed in");
   }

@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
 import { onCall, HttpsError } from "firebase-functions/v2/https";
-import { getModel } from "./gemini";
+import { getModel, geminiApiKey } from "./gemini";
 
 if (!admin.apps.length) {
   admin.initializeApp();
@@ -47,7 +47,7 @@ Respond with ONLY valid JSON: {"suggestions": ["item1", "item2", ...]}`;
   }
 }
 
-export const suggestFrequentItems = onCall(async (request) => {
+export const suggestFrequentItems = onCall({ secrets: [geminiApiKey] }, async (request) => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "Must be signed in");
   }

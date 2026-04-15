@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
 import { onCall, HttpsError } from "firebase-functions/v2/https";
-import { getVisionModel, CATEGORIES } from "./gemini";
+import { getVisionModel, CATEGORIES, geminiApiKey } from "./gemini";
 
 if (!admin.apps.length) {
   admin.initializeApp();
@@ -49,7 +49,7 @@ Respond with ONLY valid JSON: {"items": [{"name": "...", "quantity": "..." or nu
   }
 }
 
-export const parseImage = onCall(async (request) => {
+export const parseImage = onCall({ secrets: [geminiApiKey] }, async (request) => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "Must be signed in");
   }
