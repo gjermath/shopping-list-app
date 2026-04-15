@@ -37,6 +37,8 @@ targets:
         product: FirebaseStorage
       - package: FirebaseSDK
         product: FirebaseMessaging
+      - target: ShoppingListWidget
+        embed: true
     entitlements:
       path: ShoppingList/ShoppingList.entitlements
       properties:
@@ -54,3 +56,18 @@ targets:
     settings:
       base:
         SWIFT_VERSION: "5.9"
+
+  ShoppingListWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - ShoppingListWidget
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.ShoppingList.Widget
+        INFOPLIST_KEY_CFBundleDisplayName: Shopping List Widget
+        INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    dependencies:
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
