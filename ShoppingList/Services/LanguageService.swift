@@ -39,7 +39,7 @@ class LanguageService: ObservableObject {
         return resolvedAppLanguage
     }
 
-    static var deviceLanguage: String {
+    static nonisolated var deviceLanguage: String {
         let preferred = Locale.preferredLanguages.first ?? "en"
         return preferred.hasPrefix("da") ? "da" : "en"
     }
