@@ -130,4 +130,39 @@ class ItemService: ObservableObject {
             userId: userId
         )
     }
+
+    // MARK: - Static helpers for App Intents
+
+    static func addItemDirectly(
+        listId: String,
+        rawInput: String,
+        userId: String,
+        source: ItemSource = .text
+    ) async throws {
+        let db = Firestore.firestore()
+
+        let item = Item(
+            name: rawInput,
+            rawInput: rawInput,
+            addedBy: userId,
+            addedAt: Date(),
+            source: source
+        )
+
+        try db.collection("lists").document(listId)
+            .collection("items")
+            .addDocument(from: item)
+
+        let historyService = HistoryService()
+        try await historyService.recordAction(
+            listId: listId,
+            itemName: rawInput,
+            action: .added,
+            userId: userId
+        )
+
+        try await db.collection("lists").document(listId).updateData([
+            "updatedAt": FieldValue.serverTimestamp()
+        ])
+    }
 }

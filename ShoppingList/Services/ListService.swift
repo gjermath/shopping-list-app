@@ -96,6 +96,28 @@ class ListService: ObservableObject {
             "memberIds": FieldValue.arrayRemove([userId])
         ])
     }
+
+    // MARK: - Static helpers for App Intents
+
+    static func fetchLists(for userId: String) async throws -> [ShoppingList] {
+        let db = Firestore.firestore()
+        let snapshot = try await db.collection("lists")
+            .whereField("memberIds", arrayContains: userId)
+            .order(by: "updatedAt", descending: true)
+            .getDocuments()
+
+        return snapshot.documents.compactMap { doc in
+            var list = try? doc.data(as: ShoppingList.self)
+            list?.currentUserId = userId
+            return list
+        }
+    }
+
+    static func fetchUserDefaultListId(for userId: String) async throws -> String? {
+        let db = Firestore.firestore()
+        let doc = try await db.collection("users").document(userId).getDocument()
+        return doc.data()?["defaultListId"] as? String
+    }
 }
 
 enum ListServiceError: LocalizedError {
