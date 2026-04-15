@@ -30,7 +30,7 @@ struct ListsTabView: View {
                 }
             }
             .navigationDestination(for: ShoppingList.self) { list in
-                Text("List Detail: \(list.name)")
+                ListDetailView(list: list)
             }
             .sheet(isPresented: $showCreateList) {
                 CreateListView()
