@@ -179,11 +179,33 @@ No new Cloud Functions needed.
 
 ### UI Tests
 
-- Create list flow: select each type, verify type chip selection, verify event date picker appears for `.event`
-- Home screen: verify primary list renders as hero card, other lists as compact rows
-- Archive flow: archive a list, verify it moves to archived section, unarchive and verify it returns
-- Set as primary: change primary list, verify hero card updates
-- Event dimming: create event list with past date, verify reduced opacity
+Tests follow existing conventions: `signInIfNeeded()` for auth, bilingual label matching (EN/DA), predicate-based element queries, and `sleep()` for Firestore listener round-trips.
+
+**Create List with Type Selection:**
+- `testCreateGroceryList` — tap +, enter name, verify Groceries type chip is selected by default, tap Create, verify list appears on home screen with cart icon
+- `testCreatePharmacyList` — tap +, enter name, tap Pharmacy chip, tap Create, verify list appears with pharmacy icon
+- `testCreateEventListShowsDatePicker` — tap +, tap Event chip, verify a date picker appears. Tap a different type chip, verify date picker disappears. Tap Event again, verify it reappears.
+- `testCreateDIYProjectList` — tap +, enter name, tap DIY Project chip, tap Create, verify list appears with hammer icon
+- `testCreateCustomList` — tap +, enter name, tap Custom chip, tap Create, verify list appears
+
+**Primary List Hero Card:**
+- `testDefaultPrimaryListIsGroceries` — sign in fresh (new account), verify the auto-created Groceries list renders as the hero card (check for "Primary" badge via predicate matching)
+- `testSetAsPrimaryFromCreateSheet` — create a new Pharmacy list with "Set as Primary" toggle on, verify it now renders as the hero card and the previous primary moves to the "Other Lists" section
+- `testSetAsPrimaryFromListSettings` — open an existing non-primary list, tap settings menu, tap "Set as Primary", navigate back to home screen, verify that list is now the hero card
+
+**Archive Flow:**
+- `testArchiveList` — open a non-primary list's settings, tap "Archive List", navigate back to home screen, verify the list no longer appears in the main section but appears under a collapsible "Archived" section
+- `testUnarchiveList` — with an archived list, expand the Archived section, tap the list, open settings, tap "Unarchive List", navigate back, verify it returns to the "Other Lists" section
+
+**Event Date & Dimming:**
+- `testPastEventListIsDimmed` — create an event list with a date in the past, navigate to home screen, verify the list card has reduced opacity (use `XCUIElement` value or accessibility trait to confirm dimmed state) and shows "Past event" label
+
+**Per-Type Item Categories:**
+- `testPharmacyListShowsPharmacyCategories` — create a Pharmacy list, open it, add an item (e.g., "Ibuprofen"), wait for Cloud Function categorization, verify category header is from the pharmacy set (e.g., "Over-the-Counter") rather than grocery categories
+- `testDIYListShowsDIYCategories` — create a DIY Project list, open it, add "Screwdriver", verify category header is from the DIY set (e.g., "Tools")
+
+**Helper Updates:**
+- `createListIfNeeded(name:type:)` — extend existing helper to accept an optional `ListType` parameter, defaulting to `.groceries`. Taps the appropriate type chip before creating.
 
 ### Cloud Function Tests
 
