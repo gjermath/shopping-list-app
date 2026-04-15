@@ -140,9 +140,9 @@ enum ListServiceError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .notAuthenticated: return "You must be signed in."
-        case .inviteNotFound: return "Invite link not found or expired."
-        case .alreadyMember: return "You're already a member of this list."
+        case .notAuthenticated: return String(localized: "You must be signed in.")
+        case .inviteNotFound: return String(localized: "Invite link not found or expired.")
+        case .alreadyMember: return String(localized: "You're already a member of this list.")
         }
     }
 }

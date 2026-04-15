@@ -123,7 +123,7 @@ enum AuthError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidCredential: return "Unable to process Apple Sign-In credentials."
+        case .invalidCredential: return String(localized: "Unable to process Apple Sign-In credentials.")
         }
     }
 }

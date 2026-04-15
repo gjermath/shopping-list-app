@@ -27,7 +27,7 @@ enum PhotoServiceError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .compressionFailed: return "Failed to process image."
+        case .compressionFailed: return String(localized: "Failed to process image.")
         }
     }
 }
