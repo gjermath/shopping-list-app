@@ -33,7 +33,7 @@ firebase-debug.*.log
 .firebase/
 
 # Secrets - never commit real credentials
-# ShoppingList/GoogleService-Info.plist  # Uncomment if you want to exclude real config
+GoogleService-Info.plist
 *.p8
 *.p12
 *.mobileprovision
